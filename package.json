@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch ./RestApi/index.js",
+    "start": "node ./RestApi/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
