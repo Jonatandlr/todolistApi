@@ -1,0 +1,36 @@
+
+##Metodos GET 
+
+//Conseguir todas las categorias
+GET http://localhost:3000/categories
+###
+
+//Conseguir  notas por categoria
+GET http://localhost:3000/categories/notes/Personal
+
+
+
+### POST 
+
+
+//Crear una categoria por name 
+POST  http://localhost:3000/categories/add
+Content-Type: application/json
+
+{
+    "name": "Completed"
+}
+
+###	Method PUT
+PUT http://localhost:3000/categories/update/1
+Content-Type: application/json
+
+{
+    "name": "Otros"
+}
+
+###	Method DELETE
+DELETE http://localhost:3000/categories/delete/5
+
+
+

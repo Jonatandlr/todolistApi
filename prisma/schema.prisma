@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Note {
+  id          Int                 @id @default(autoincrement())
+  title       String
+  description String?
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  completed   Boolean             @default(false)
+  categories  CategoriesOnPosts[]
+}
+
+model Category {
+  id    Int                 @id @default(autoincrement())
+  name  String              @unique
+  notes CategoriesOnPosts[]
+}
+
+model CategoriesOnPosts {
+  assignedAt DateTime @default(now())
+  NoteId     Int
+  CategoryId String
+  Notes      Note     @relation(fields: [NoteId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [CategoryId], references: [name], onDelete: Cascade)
+
+  @@id([NoteId, CategoryId])
+}

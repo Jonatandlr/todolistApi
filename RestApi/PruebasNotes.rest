@@ -1,0 +1,35 @@
+
+
+###Metodos GET
+//Conseguir todas las notas
+GET http://localhost:3000/notes
+
+###
+//Conseguir una nota
+GET http://localhost:3000/notes/1
+
+
+###Metodos POST
+//crear una nota
+POST http://localhost:3000/notes/add
+Content-Type: application/json
+
+{
+    "title": "Hacer ejercicio",
+    "description": "Descripcion de la nota 1",
+    "categories": []
+}
+
+###Metodos PUT
+//actualizar una nota
+PUT http://localhost:3000/notes/update/1
+Content-Type: application/json
+{
+    "title": "Nota Actualizada",
+    "description": "Descripcion de la nota 1",
+    "categories": ["Work","Personal"]
+}
+
+###Metodos DELETE
+//eliminar una nota
+DELETE http://localhost:3000/notes/delete/1
