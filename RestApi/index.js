@@ -36,7 +36,9 @@ app.use(express.json());
 
 
 //Metodos GET
-
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 //Obtiene todas las notas de la db
 app.get('/notes', async (req, res) => {
   const notes = await prisma.note.findMany({
