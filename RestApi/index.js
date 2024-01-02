@@ -37,7 +37,7 @@ app.use(express.json());
 
 //Metodos GET
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello!');
 });
 //Obtiene todas las notas de la db
 app.get('/notes', async (req, res) => {
