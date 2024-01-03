@@ -1,6 +1,6 @@
 # Notes API
 
-This is a simple Node.js and Express API for creating, reading, updating, and deleting notes. 
+This is a simple Node.js and Express API for creating, reading, updating, and deleting notes. used in a [ToDoListApp](https://github.com/Jonatandlr/ToDoList)
 
 ## Features
 
